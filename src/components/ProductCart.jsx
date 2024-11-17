@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { iconCart } from "../assets/img";
+import { useSelector } from "react-redux";
 
 const ProductCart = (props) => {
   const { id, name, price, image, slug } = props.data;
-
+  const carts = useSelector((store) => store.cart.items);
   return (
     <div className="bg-white p-5 rounded-xl shadow-sm">
       <Link to={slug}>
