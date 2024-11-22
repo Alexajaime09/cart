@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 const ProductCart = (props) => {
   const { id, name, price, image, slug } = props.data;
   const carts = useSelector((store) => store.cart.items);
+  console.log(carts);
   return (
     <div className="bg-white p-5 rounded-xl shadow-sm">
       <Link to={slug}>
